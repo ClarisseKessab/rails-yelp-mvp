@@ -1,0 +1,19 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <div class="card m-5 p-5">
+    <div class="mb-3">
+      <%= f.input :name, class:"form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.input :address, class:"form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.input :phone_number, class:"form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.input :category, collection: Restaurant::CATEGORIES.sort, class:"form-control"  %>
+    </div>
+    <div class="mb-3">
+      <%= f.submit :class => 'btn btn-primary'%>
+    </div>
+  </div>
+<% end %>
